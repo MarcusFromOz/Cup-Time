@@ -1,4 +1,5 @@
 ﻿
+//** Interface
 
 namespace RPG.Core
 {

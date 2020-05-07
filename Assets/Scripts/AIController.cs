@@ -9,22 +9,27 @@ namespace RPG.Control
 {
     public class AIController : MonoBehaviour
     {
+        //** Variables
         [SerializeField] float chaseDistance = 10f;
-        
+        [SerializeField] float timeInSuspiciousState = 5f;
+
         Fighter fighter;
         Health health;
         GameObject player;
         Mover mover;
 
-        //State
+        //Variables - State
         Vector3 guardPosition;
+        float timeSinceLastSawPlayer = Mathf.Infinity;
         
+        //** start and update
         private void Start()
             {
             fighter = GetComponent<Fighter>();
             health = GetComponent<Health>();
             player = GameObject.FindWithTag("Player");
             mover = GetComponent<Mover>();
+
             guardPosition = transform.position;
             }
 
@@ -34,13 +39,39 @@ namespace RPG.Control
 
             if (InAttackRangeOfPlayer() && fighter.CanAttack(player))
             {
-                fighter.Attack(player);
+                timeSinceLastSawPlayer = 0;
+                AttackBehaviour();
+            }
+            else if (timeSinceLastSawPlayer < timeInSuspiciousState)
+            {
+                SuspicionBehaviour();
             }
             else
             {
-                //fighter.Cancel();
-                mover.StartMoveAction(guardPosition);
+                GuardBehaviour();
             }
+
+            timeSinceLastSawPlayer += Time.deltaTime;
+        }
+
+        //** public methods
+
+
+        //** private methods
+
+        private void SuspicionBehaviour()
+        {
+            GetComponent<ActionScheduler>().CancelCurrentAction();
+        }
+
+        private void GuardBehaviour()
+        {
+            mover.StartMoveAction(guardPosition);
+        }
+
+        private void AttackBehaviour()
+        {
+            fighter.Attack(player);
         }
 
         private bool InAttackRangeOfPlayer()
@@ -50,7 +81,7 @@ namespace RPG.Control
             return distanceToPlayer < chaseDistance;
         }
 
-        //Called by Unity
+        //** Called by Unity
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.blue;

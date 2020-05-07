@@ -10,7 +10,10 @@ namespace RPG.Control
 {
     public class PlayerController : MonoBehaviour
     {
+        //** variables
         Health health;
+
+        //** start and update
         private void Start()
         {
             health = GetComponent<Health>();
@@ -26,7 +29,12 @@ namespace RPG.Control
             if (InteractWithMovement()) return;
         }
 
-        //Combat Functions
+        //** public functions
+
+
+
+        //** private functions
+        
         private bool InteractWithCombat()
         {
             RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
@@ -47,7 +55,6 @@ namespace RPG.Control
             return false;
         }
 
-        //Movement functions
         private bool InteractWithMovement()
         {
             RaycastHit hit;
@@ -65,7 +72,6 @@ namespace RPG.Control
             return false;
         }
 
-        //Generic functions
         private static Ray GetMouseRay()
         {
             return Camera.main.ScreenPointToRay(Input.mousePosition);
