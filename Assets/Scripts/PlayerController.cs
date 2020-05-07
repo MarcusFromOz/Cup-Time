@@ -3,23 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using RPG.Movement;
 using RPG.Combat;
+using RPG.Core;
 using System;
 
 namespace RPG.Control
 {
     public class PlayerController : MonoBehaviour
     {
+        Health health;
+        private void Start()
+        {
+            health = GetComponent<Health>();
+        }
+
         void Update()
         {
+            if (health.IsDead()) return;
+
             //Dont move if you fought
             if (InteractWithCombat()) return; 
             
             if (InteractWithMovement()) return;
-
         }
 
         //Combat Functions
-
         private bool InteractWithCombat()
         {
             RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());

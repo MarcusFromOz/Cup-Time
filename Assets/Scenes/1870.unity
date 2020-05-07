@@ -6722,17 +6722,17 @@ PrefabInstance:
     - target: {fileID: 5437845620758495700, guid: c59031b994f8a004b8500bf00e989aee,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 62.113
+      value: 56.77
       objectReference: {fileID: 0}
     - target: {fileID: 5437845620758495700, guid: c59031b994f8a004b8500bf00e989aee,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 5.061
       objectReference: {fileID: 0}
     - target: {fileID: 5437845620758495700, guid: c59031b994f8a004b8500bf00e989aee,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 63.44
+      value: 64.31
       objectReference: {fileID: 0}
     - target: {fileID: 5437845620758495700, guid: c59031b994f8a004b8500bf00e989aee,
         type: 3}
@@ -10255,17 +10255,17 @@ PrefabInstance:
     - target: {fileID: 8487686758861501931, guid: 484589fa2cd981c46b38025a3b751f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 58.55858
+      value: 55.96
       objectReference: {fileID: 0}
     - target: {fileID: 8487686758861501931, guid: 484589fa2cd981c46b38025a3b751f2c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.9990854
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8487686758861501931, guid: 484589fa2cd981c46b38025a3b751f2c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 52.1315
+      value: 62.8
       objectReference: {fileID: 0}
     - target: {fileID: 8487686758861501931, guid: 484589fa2cd981c46b38025a3b751f2c,
         type: 3}
@@ -10306,6 +10306,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970559143835041071, guid: 484589fa2cd981c46b38025a3b751f2c,
+        type: 3}
+      propertyPath: chaseDistance
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 484589fa2cd981c46b38025a3b751f2c, type: 3}
