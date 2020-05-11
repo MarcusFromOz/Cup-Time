@@ -16,8 +16,9 @@ namespace RPG.Control
         [SerializeField] PatrolPath patrolPath;
         [SerializeField] float waypointTolerance = 1f;
         [SerializeField] float waypointDwellTime = 3f;
-
-
+        
+        [Range(0,1)] [SerializeField] float patrolSpeedFraction = 0.3f;
+        
         Fighter fighter;
         Health health;
         GameObject player;
@@ -92,7 +93,7 @@ namespace RPG.Control
 
             if (timeSinceArrivedAtWaypoint > (UnityEngine.Random.Range(0.5f, 2.5f) * waypointDwellTime))
             {
-                mover.StartMoveAction(nextPosition);
+                mover.StartMoveAction(nextPosition, patrolSpeedFraction);
             }
         }
 
@@ -116,6 +117,7 @@ namespace RPG.Control
         {
             timeSinceLastSawPlayer = 0;
             fighter.Attack(player);
+            //alter run speed here? nav mesh agent speed x factor
         }
 
         private bool InAttackRangeOfPlayer()
