@@ -9,7 +9,6 @@ namespace RPG.Core
         //** Variables
         [SerializeField] float healthPoints = 100f;
         bool isDead = false;
-
         //** Start and Update
 
 
