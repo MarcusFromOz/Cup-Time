@@ -15,10 +15,20 @@ public class Portal : MonoBehaviour
     [SerializeField] int sceneToLoad = -1;
     [SerializeField] Transform spawnPoint;
     [SerializeField] DestinationIdentifier destination;
+    [SerializeField] int currentScene = -1;
 
     //** Start and Update
 
+
     //** Public methods
+
+    //To go from Opening Scene to Scene 1 
+    public void LoadFirstScene()
+    {
+        sceneToLoad = 1;
+        StartCoroutine(Transition()); 
+    }
+
 
     //** Private methods
 
