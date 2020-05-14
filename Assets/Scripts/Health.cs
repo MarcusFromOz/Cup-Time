@@ -8,6 +8,8 @@ namespace RPG.Core
     {
         //** Variables
         [SerializeField] float healthPoints = 100f;
+        [SerializeField] float maxHealthPoints = 200f;
+
         bool isDead = false;
         //** Start and Update
 
@@ -28,6 +30,12 @@ namespace RPG.Core
                 Die();
             }
         }
+
+        public void HealDamage(float healAmount)
+        {
+            healthPoints = Mathf.Min(healthPoints + healAmount, maxHealthPoints);
+        }
+
 
         //** Private methods
         private void Die()
