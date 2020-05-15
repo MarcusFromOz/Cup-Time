@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.AI;
+using RPG.SceneManagement;
 
 
 public class Portal : MonoBehaviour
@@ -16,6 +17,9 @@ public class Portal : MonoBehaviour
     [SerializeField] Transform spawnPoint;
     [SerializeField] DestinationIdentifier destination;
     [SerializeField] int currentScene = -1;
+    [SerializeField] float fadeOutTime = 1f;
+    [SerializeField] float fadeInTime = 2f;
+    [SerializeField] float fadeWaitTime = 0.5f;
 
     //** Start and Update
 
@@ -49,10 +53,17 @@ public class Portal : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+
+        Fader fader = FindObjectOfType<Fader>();
+
+        yield return fader.FadeOut(fadeOutTime);
         yield return SceneManager.LoadSceneAsync(sceneToLoad);
 
         Portal otherPortal = GetOtherPortal();
         UpdatePlayer(otherPortal);
+
+        yield return new WaitForSeconds(fadeWaitTime);
+        yield return fader.FadeIn(fadeInTime);
 
         Destroy(gameObject);
     }

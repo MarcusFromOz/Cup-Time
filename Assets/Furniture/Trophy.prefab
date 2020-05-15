@@ -668,7 +668,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.70395374
+  m_Radius: 1
   m_Height: 2.1480775
   m_Direction: 1
   m_Center: {x: 0, y: 0.0601933, z: -0.035578728}
@@ -684,6 +684,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e44de7af84f59d2438eff1ba56c11ba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healAmount: 50
+  years: []
 --- !u!54 &4394382602786431194
 Rigidbody:
   m_ObjectHideFlags: 0
