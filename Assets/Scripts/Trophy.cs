@@ -11,6 +11,7 @@ public class Trophy : MonoBehaviour
     int numberOfTrophies;
     public GameObject[] years;
     private TextMeshProUGUI textMeshProUGUI;
+    private TextMeshPro textMeshPro;
 
     // Start is called before the first frame update
     void Start()
@@ -63,6 +64,21 @@ public class Trophy : MonoBehaviour
             if (textMeshProUGUI != null)
             {
                 textMeshProUGUI.color = Color.white;
+
+                if (textMeshProUGUI.enabled == false)
+                {
+                    // ToDo - Get the text from the Dictionary
+                    // ToDo - This is a very dodgey way to do it - be more specific or remove
+                    textMeshProUGUI.color = Color.black;
+                    textMeshProUGUI.enabled = true;
+                }
+            }
+
+            //if inactive by default then activate it
+            textMeshPro = year.GetComponent<TextMeshPro>();
+            if (textMeshPro != null)
+            {
+                textMeshPro.gameObject.SetActive(true);
             }
         }
     }

@@ -261,6 +261,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 2982295284063069553, guid: b22c3bff89d68034c93d564e1d610218,
+        type: 3}
+      propertyPath: sceneToLoad
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2982295284063069559, guid: b22c3bff89d68034c93d564e1d610218,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -315,11 +320,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2982295284063069553, guid: b22c3bff89d68034c93d564e1d610218,
-        type: 3}
-      propertyPath: sceneToLoad
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b22c3bff89d68034c93d564e1d610218, type: 3}
@@ -662,8 +662,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28, y: -176}
-  m_SizeDelta: {x: 1120.4, y: 223}
+  m_AnchoredPosition: {x: 28, y: -185}
+  m_SizeDelta: {x: 1120.4, y: 153.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1011959897
 MonoBehaviour:
@@ -1163,7 +1163,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Help us explore 4 eras in Port Adelaide''s history and collect our premiership
+  m_Text: 'Explore 4 eras in Port Adelaide''s history and collect our premiership
     trophies along the way. '
 --- !u!222 &1703918193
 CanvasRenderer:
