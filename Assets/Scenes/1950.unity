@@ -8423,7 +8423,7 @@ PrefabInstance:
     - target: {fileID: 4927880912459614566, guid: 5c0245418126ca4449e7db7d21980dea,
         type: 3}
       propertyPath: uniqueIdentifier
-      value: e9ed25dc-29cb-4150-bd88-337370349f34
+      value: player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c0245418126ca4449e7db7d21980dea, type: 3}

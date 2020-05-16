@@ -56,8 +56,25 @@ public class Portal : MonoBehaviour
 
         Fader fader = FindObjectOfType<Fader>();
 
-        yield return fader.FadeOut(fadeOutTime);
+        if (fader != null)
+        {
+            yield return fader.FadeOut(fadeOutTime);
+        }
+
+        //Save current level
+        SavingWrapper wrapper = FindObjectOfType<SavingWrapper>();
+        if (wrapper != null)
+        {
+            wrapper.Save();
+        }
+
         yield return SceneManager.LoadSceneAsync(sceneToLoad);
+
+        //Load current level
+        if (wrapper != null)
+        {
+            wrapper.Load();
+        }
 
         Portal otherPortal = GetOtherPortal();
         UpdatePlayer(otherPortal);
@@ -72,10 +89,13 @@ public class Portal : MonoBehaviour
     {
         GameObject player = GameObject.FindWithTag("Player");
 
-        //can clash with NavMesh agent
-        //player.transform.position = otherPortal.spawnPoint.position;
-        player.GetComponent<NavMeshAgent>().Warp(otherPortal.spawnPoint.position);
+        //prevent clash with NavMesh agent
+        //alternate method to manage this .. player.GetComponent<NavMeshAgent>().Warp(otherPortal.spawnPoint.position);
+        
+        player.GetComponent<NavMeshAgent>().enabled = false;
+        player.transform.position = otherPortal.spawnPoint.position;
         player.transform.rotation = otherPortal.spawnPoint.rotation;
+        player.GetComponent<NavMeshAgent>().enabled = true;
     }
 
     private Portal GetOtherPortal()

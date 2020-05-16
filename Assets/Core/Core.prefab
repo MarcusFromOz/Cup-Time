@@ -192,7 +192,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LookAt
       value: 
-      objectReference: {fileID: 800656430854309080}
+      objectReference: {fileID: 0}
     - target: {fileID: 7696298403899165827, guid: 0b7f734975da02e4db90d699ed09a714,
         type: 3}
       propertyPath: m_Follow
@@ -213,11 +213,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4641974333461946189}
     m_Modifications:
-    - target: {fileID: 8326185217970284203, guid: f7e7d8de0409ad44ab9a04069e4aed63,
-        type: 3}
-      propertyPath: m_Name
-      value: Directional Light
-      objectReference: {fileID: 0}
     - target: {fileID: 8326185217970284201, guid: f7e7d8de0409ad44ab9a04069e4aed63,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -272,6 +267,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8326185217970284203, guid: f7e7d8de0409ad44ab9a04069e4aed63,
+        type: 3}
+      propertyPath: m_Name
+      value: Directional Light
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7e7d8de0409ad44ab9a04069e4aed63, type: 3}
@@ -341,6 +341,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091869075366188777, guid: 0e660628a63fb5c40a960acba3e8aeaf,
+        type: 3}
+      propertyPath: field of view
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e660628a63fb5c40a960acba3e8aeaf, type: 3}
