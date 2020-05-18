@@ -31,6 +31,7 @@ MonoBehaviour:
   patrolPath: {fileID: 0}
   waypointTolerance: 1
   waypointDwellTime: 3
+  patrolSpeedFraction: 0.3
 --- !u!114 &7680638823124086386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,6 +105,18 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: bfbe2e8b331e2cc42be1591f949c0e41, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
+--- !u!4 &1785722983 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 481036, guid: 30cf93deff988e74e88a144bd2127c18,
+    type: 3}
+  m_PrefabInstance: {fileID: 1785245547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1785649253 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 423694, guid: 30cf93deff988e74e88a144bd2127c18,
+    type: 3}
+  m_PrefabInstance: {fileID: 1785245547}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6267870624185205888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -176,6 +189,33 @@ PrefabInstance:
       propertyPath: weaponDamage
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8986268377429462868, guid: 1585f55580f6c334eb1933ba3a7da3c5,
+        type: 3}
+      propertyPath: handTransform
+      value: 
+      objectReference: {fileID: 1785649253}
+    - target: {fileID: 8986268377429462868, guid: 1585f55580f6c334eb1933ba3a7da3c5,
+        type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 135bce1560ffd8849bdbf20e4cc526d3,
+        type: 2}
+    - target: {fileID: 8986268377429462868, guid: 1585f55580f6c334eb1933ba3a7da3c5,
+        type: 3}
+      propertyPath: leftHandTransform
+      value: 
+      objectReference: {fileID: 1785722983}
+    - target: {fileID: 8986268377429462868, guid: 1585f55580f6c334eb1933ba3a7da3c5,
+        type: 3}
+      propertyPath: rightHandTransform
+      value: 
+      objectReference: {fileID: 1785649253}
+    - target: {fileID: 8986268377429462868, guid: 1585f55580f6c334eb1933ba3a7da3c5,
+        type: 3}
+      propertyPath: defaultweapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 135bce1560ffd8849bdbf20e4cc526d3,
+        type: 2}
     - target: {fileID: 87899091, guid: 1585f55580f6c334eb1933ba3a7da3c5, type: 3}
       propertyPath: m_Speed
       value: 4
