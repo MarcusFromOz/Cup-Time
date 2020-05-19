@@ -222,21 +222,6 @@ MonoBehaviour:
   VirtualCamera:
     exposedName: 6dcfc9ee8ad7ee345b304bfa247f3b10
     defaultValue: {fileID: 0}
---- !u!114 &114228889145057092
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90fb794a295e73545af71bcdb7375791, type: 3}
-  m_Name: CinemachineShot
-  m_EditorClassIdentifier: 
-  VirtualCamera:
-    exposedName: 1c2a625cf2e79144190ff4403b85ac60
-    defaultValue: {fileID: 0}
 --- !u!114 &114380464671559572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -310,7 +295,7 @@ MonoBehaviour:
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: 1.2666666666666675
+    m_BlendOutDuration: 1.3833333333333337
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -370,16 +355,16 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CM Reveal1
     m_Version: 1
-  - m_Start: 4.116666666666666
+  - m_Start: 4
     m_ClipIn: 0
     m_Asset: {fileID: 114170346493068476}
-    m_Duration: 4.916666666666668
+    m_Duration: 5.033333333333335
     m_TimeScale: 1
     m_ParentTrack: {fileID: 114768421672927098}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 1.2666666666666675
-    m_BlendOutDuration: 2.9000000000000012
+    m_BlendInDuration: 1.3833333333333337
+    m_BlendOutDuration: 2.2500000000000018
     m_MixInCurve:
       serializedVersion: 2
       m_Curve: []
@@ -403,49 +388,16 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CM Reveal2
     m_Version: 1
-  - m_Start: 6.133333333333334
-    m_ClipIn: 0
-    m_Asset: {fileID: 114228889145057092}
-    m_Duration: 7.05
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: 114768421672927098}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: 2.9000000000000012
-    m_BlendOutDuration: 0.9500000000000011
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: CM Reveal3
-    m_Version: 1
-  - m_Start: 12.233333333333333
+  - m_Start: 6.783333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114402621461660020}
-    m_Duration: 7.316666666666668
+    m_Duration: 4.283333333333333
     m_TimeScale: 1
     m_ParentTrack: {fileID: 114768421672927098}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 0.9500000000000011
-    m_BlendOutDuration: 2.8000000000000007
+    m_BlendInDuration: 2.2500000000000018
+    m_BlendOutDuration: 0.7666666666666657
     m_MixInCurve:
       serializedVersion: 2
       m_Curve: []
@@ -469,15 +421,15 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CM Dolly1
     m_Version: 1
-  - m_Start: 16.75
+  - m_Start: 10.3
     m_ClipIn: 0
     m_Asset: {fileID: 114547176310415398}
-    m_Duration: 4.116666666666667
+    m_Duration: 5.633333333333333
     m_TimeScale: 1
     m_ParentTrack: {fileID: 114768421672927098}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 2.8000000000000007
+    m_BlendInDuration: 0.7666666666666657
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2

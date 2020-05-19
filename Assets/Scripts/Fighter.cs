@@ -93,7 +93,6 @@ namespace RPG.Combat
                 timeSinceLastAttack = 0;
             }
         }
-
         private void TriggerAttack()
         {
             GetComponent<Animator>().ResetTrigger("stopAttack");
@@ -130,7 +129,5 @@ namespace RPG.Combat
         {
             Hit();
         }
-
-
     }
 }
