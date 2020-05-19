@@ -82,6 +82,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.9
       objectReference: {fileID: 0}
+    - target: {fileID: 3048462395076250580, guid: 484589fa2cd981c46b38025a3b751f2c,
+        type: 3}
+      propertyPath: defaultweapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 88837254e314bfa4cb46fa0ff03543d9,
+        type: 2}
     - target: {fileID: 6970559143835041071, guid: 484589fa2cd981c46b38025a3b751f2c,
         type: 3}
       propertyPath: chaseDistance
@@ -92,11 +98,10 @@ PrefabInstance:
       propertyPath: timeInSuspiciousState
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 3048462395076250580, guid: 484589fa2cd981c46b38025a3b751f2c,
+    - target: {fileID: 614353243844222925, guid: 484589fa2cd981c46b38025a3b751f2c,
         type: 3}
-      propertyPath: defaultweapon
-      value: 
-      objectReference: {fileID: 11400000, guid: 88837254e314bfa4cb46fa0ff03543d9,
-        type: 2}
+      propertyPath: characterClass
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 484589fa2cd981c46b38025a3b751f2c, type: 3}
