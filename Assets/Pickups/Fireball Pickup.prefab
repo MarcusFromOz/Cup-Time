@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1330888238153940424
+--- !u!1001 &2832381975017306628
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,12 +10,12 @@ PrefabInstance:
     - target: {fileID: 1132845733247964314, guid: 21dfb032889d43740b7653e0a57b8b67,
         type: 3}
       propertyPath: m_Name
-      value: Sword Pickup
+      value: Fireball Pickup
       objectReference: {fileID: 0}
     - target: {fileID: 6886146190372188482, guid: 21dfb032889d43740b7653e0a57b8b67,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.043
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6886146190372188482, guid: 21dfb032889d43740b7653e0a57b8b67,
         type: 3}
@@ -67,68 +67,74 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5270352870226947050, guid: 21dfb032889d43740b7653e0a57b8b67,
+        type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 1860cc256f2a6d24182d343e0125e20f,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21dfb032889d43740b7653e0a57b8b67, type: 3}
---- !u!4 &5613951017396866186 stripped
+--- !u!4 &8709439547100564294 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6886146190372188482, guid: 21dfb032889d43740b7653e0a57b8b67,
     type: 3}
-  m_PrefabInstance: {fileID: 1330888238153940424}
+  m_PrefabInstance: {fileID: 2832381975017306628}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &7375934192318100647
+--- !u!1001 &8303269010103352118
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 5613951017396866186}
+    m_TransformParent: {fileID: 8709439547100564294}
     m_Modifications:
-    - target: {fileID: 100000, guid: 38703959b00cc0145ba1149ca77cac13, type: 3}
+    - target: {fileID: 1725317912486240, guid: e55149ba6f4d00741984987e258c3378, type: 3}
       propertyPath: m_Name
-      value: SM_Wep_Sword_01
+      value: Magic fire pro orange
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 38703959b00cc0145ba1149ca77cac13, type: 3}
+    - target: {fileID: 4274653050354540, guid: e55149ba6f4d00741984987e258c3378, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 38703959b00cc0145ba1149ca77cac13, type: 3}
+    - target: {fileID: 4274653050354540, guid: e55149ba6f4d00741984987e258c3378, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.55
+      value: -0.175
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 38703959b00cc0145ba1149ca77cac13, type: 3}
+    - target: {fileID: 4274653050354540, guid: e55149ba6f4d00741984987e258c3378, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.095
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 38703959b00cc0145ba1149ca77cac13, type: 3}
+    - target: {fileID: 4274653050354540, guid: e55149ba6f4d00741984987e258c3378, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 38703959b00cc0145ba1149ca77cac13, type: 3}
+    - target: {fileID: 4274653050354540, guid: e55149ba6f4d00741984987e258c3378, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 38703959b00cc0145ba1149ca77cac13, type: 3}
+    - target: {fileID: 4274653050354540, guid: e55149ba6f4d00741984987e258c3378, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 38703959b00cc0145ba1149ca77cac13, type: 3}
+    - target: {fileID: 4274653050354540, guid: e55149ba6f4d00741984987e258c3378, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 38703959b00cc0145ba1149ca77cac13, type: 3}
+    - target: {fileID: 4274653050354540, guid: e55149ba6f4d00741984987e258c3378, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 38703959b00cc0145ba1149ca77cac13, type: 3}
+    - target: {fileID: 4274653050354540, guid: e55149ba6f4d00741984987e258c3378, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 38703959b00cc0145ba1149ca77cac13, type: 3}
+    - target: {fileID: 4274653050354540, guid: e55149ba6f4d00741984987e258c3378, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 38703959b00cc0145ba1149ca77cac13, type: 3}
+    - target: {fileID: 4274653050354540, guid: e55149ba6f4d00741984987e258c3378, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 38703959b00cc0145ba1149ca77cac13, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: e55149ba6f4d00741984987e258c3378, type: 3}
