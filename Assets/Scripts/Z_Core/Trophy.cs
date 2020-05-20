@@ -1,11 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using RPG.Core;
+﻿using UnityEngine;
 using TMPro;
 using RPG.Saving;
 
-namespace RPG.Core
+namespace RPG.Resources
 {
     public class Trophy : MonoBehaviour, ISaveable
     {
