@@ -15,12 +15,9 @@ namespace RPG.Stats
                 {
                     return progressionClass.health[level - 1];
                 }
-
             }
             return 30;
-
         }
-
 
         [System.Serializable]
         class ProgressionCharacterClass
@@ -28,10 +25,7 @@ namespace RPG.Stats
             public CharacterClass characterClass;
             public float[] health;
             public float[] damage;
-
-
         }
     }
-
 }
 
