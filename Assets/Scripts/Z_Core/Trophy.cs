@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;
 using RPG.Saving;
+using UnityEngine.SceneManagement;
 
 namespace RPG.Resources
 {
@@ -8,10 +9,10 @@ namespace RPG.Resources
     {
         Health player;
         [SerializeField] float healAmount = 50f;
-        int numberOfTrophies;
         public GameObject[] years;
         private TextMeshProUGUI textMeshProUGUI;
         private TextMeshPro textMeshPro;
+        private int numberOfTrophies = 0;
 
         // Start is called before the first frame update
         void Start()
@@ -24,6 +25,10 @@ namespace RPG.Resources
 
         private void OnTriggerEnter(Collider other)
         {
+            //ToDo
+            // Check the win condition
+            // throw Update some info to the canvas
+
             player = other.GetComponent<Health>();
 
             if (other.tag == "Player")
@@ -31,25 +36,27 @@ namespace RPG.Resources
                 // Add 50ish to players health
                 player.HealDamage(healAmount);
 
-                Debug.Log(gameObject.tag + " was collided with");
+                //Debug.Log(gameObject.tag + " was collided with");
 
-                //ToDo - remove hardcoded 1977 
                 if (gameObject.tag != null)
                 {
                     SetTrophyAsCollected();
                 }
 
-                Destroy(gameObject);
+                numberOfTrophies += 1;
 
+                
+                //ToDo #Trophies and Scene number hardcoded for now 
+                if (numberOfTrophies == 10)
+                    {
+                    SceneManager.LoadScene(5);
+                    }
+                else
+                {
+                    Destroy(gameObject, 1f);
+                }
             }
-
-            //ToDo
-            //Add to UI
-            // Load up list of trophies in the UI - 
-            // Make the trophy disappear (with effects - over 2 seconds)
-            // Check the win condition
-            // throw Update some info to the canvas
-        }
+        }                
 
         private void SetTrophyAsCollected()
         {
@@ -64,7 +71,7 @@ namespace RPG.Resources
 
                     //if (textMeshProUGUI.enabled == false)
                     //{
-                    //ToDo - this is to do with storing some text with each trophy - telling a bit of a story about it
+                    // ToDo - this is to do with storing some text with each trophy - telling a bit of a story about it
                     // ToDo - Get the text from the Dictionary
                     // ToDo - This is a very dodgey way to do it - be more specific or remove
                     //textMeshProUGUI.color = Color.black;
@@ -72,18 +79,18 @@ namespace RPG.Resources
                     //}
                 }
 
-                //if inactive by default then activate it
-                //textMeshPro = year.GetComponent<TextMeshPro>();
-                //if (textMeshPro != null)
-                //{
+                // if inactive by default then activate it
+                // textMeshPro = year.GetComponent<TextMeshPro>();
+                // if (textMeshPro != null)
+                // {
                 //    textMeshPro.gameObject.SetActive(true);
-                //}
+                // }
             }
         }
 
         public object CaptureState()
         {
-            //ToDo - Get Tropy state saving between levels and restarts
+            // ToDo - Get Trophy state saving between levels and restarts
             // not sure why I couldn't debug this with a breakpoint - it didn't trigger
             return years;
         }
