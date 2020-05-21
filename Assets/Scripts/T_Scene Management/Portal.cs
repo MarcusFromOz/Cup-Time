@@ -23,6 +23,9 @@ namespace RPG.SceneManagement
         //Remove this field and logic post gameJam :)
         [SerializeField] bool isGameJam = true;
 
+        //ToDo think about where this should be
+        private int numberOfTrophies = 0;
+
         //** Start and Update
 
 
@@ -35,6 +38,24 @@ namespace RPG.SceneManagement
             StartCoroutine(Transition()); 
         }
 
+        public void LoadClosingScene()
+        {
+            sceneToLoad = 4;
+            StartCoroutine(Transition());
+        }
+
+        public void IncrementTrophyCount()
+        {
+            //ToDo get this working and/or move it to somewhere more sensible
+            numberOfTrophies++;
+
+            //ToDo #Trophies and Scene number hardcoded for now 
+            if (numberOfTrophies == 10)
+            {
+                SceneManager.LoadScene(5);
+            }
+        }
+        
         //** Private methods
 
         private void OnTriggerEnter(Collider other)

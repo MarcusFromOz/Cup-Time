@@ -2,6 +2,7 @@
 using TMPro;
 using RPG.Saving;
 using UnityEngine.SceneManagement;
+using RPG.SceneManagement;
 
 namespace RPG.Resources
 {
@@ -12,8 +13,7 @@ namespace RPG.Resources
         public GameObject[] years;
         private TextMeshProUGUI textMeshProUGUI;
         private TextMeshPro textMeshPro;
-        private int numberOfTrophies = 0;
-
+        
         // Start is called before the first frame update
         void Start()
         {
@@ -43,19 +43,13 @@ namespace RPG.Resources
                     SetTrophyAsCollected();
                 }
 
-                numberOfTrophies += 1;
+                //ToDo fix this
+                //Portal portal = GetComponent<Portal>();
+                //portal.IncrementTrophyCount();
 
                 
-                //ToDo #Trophies and Scene number hardcoded for now 
-                if (numberOfTrophies == 10)
-                    {
-                    SceneManager.LoadScene(5);
-                    }
-                else
-                {
-                    Destroy(gameObject, 1f);
+                Destroy(gameObject, 0.5f);
                 }
-            }
         }                
 
         private void SetTrophyAsCollected()
