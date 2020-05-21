@@ -20,6 +20,9 @@ namespace RPG.SceneManagement
         [SerializeField] float fadeInTime = 2f;
         [SerializeField] float fadeWaitTime = 0.5f;
 
+        //Remove this field and logic post gameJam :)
+        [SerializeField] bool isGameJam = true;
+
         //** Start and Update
 
 
@@ -32,15 +35,14 @@ namespace RPG.SceneManagement
             StartCoroutine(Transition()); 
         }
 
-
         //** Private methods
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.tag == "Player")
+            if (other.tag == "Player" && !isGameJam)
                 {
                 StartCoroutine(Transition());
-            }
+                }
         }
 
         private IEnumerator Transition()
