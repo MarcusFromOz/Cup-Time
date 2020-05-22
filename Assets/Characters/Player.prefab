@@ -189,6 +189,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7799886014850997698, guid: 14ea42b538dd62146b1d07f96852af6f,
         type: 3}
+    - target: {fileID: 6808717074695445325, guid: 1585f55580f6c334eb1933ba3a7da3c5,
+        type: 3}
+      propertyPath: shouldUseModifiers
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8986268377429462868, guid: 1585f55580f6c334eb1933ba3a7da3c5,
         type: 3}
       propertyPath: weaponRange

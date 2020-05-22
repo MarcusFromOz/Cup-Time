@@ -16,7 +16,8 @@ namespace RPG.Movement
         Health health;
 
         //** start and update
-        private void Start()
+
+        private void Awake()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
             health = GetComponent<Health>();
@@ -69,9 +70,12 @@ namespace RPG.Movement
         public void RestoreState(object state)
         {
             SerializableVector3 position = (SerializableVector3)state;
+            
             GetComponent<NavMeshAgent>().enabled = false;
             transform.position = position.ToVector();
             GetComponent<NavMeshAgent>().enabled = true;
+            
+            GetComponent<ActionScheduler>().CancelCurrentAction();
         }
     }
 }

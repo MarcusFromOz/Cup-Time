@@ -16,10 +16,18 @@ namespace RPG.Resources
 
         //** Start and Update
 
-        private void Start()
+        private void OnEnable()
         {
             GetComponent<BaseStats>().onLevelUp += RegenerateHealth;
+        }
 
+        private void OnDisable()
+        {
+            GetComponent<BaseStats>().onLevelUp -= RegenerateHealth;
+        }
+        
+        private void Start()
+        {
             if (healthPoints < 0)
             {
                 healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
@@ -44,6 +52,8 @@ namespace RPG.Resources
 
         public void TakeDamage(GameObject instigator, float damage)
         {
+            print(gameObject.name + " took damage: " + damage);
+            
             healthPoints = Mathf.Max(healthPoints - damage, 0);
             
             if (healthPoints == 0)
