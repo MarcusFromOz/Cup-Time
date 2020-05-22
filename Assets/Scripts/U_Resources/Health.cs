@@ -11,21 +11,32 @@ namespace RPG.Resources
         //** Variables
         float healthPoints = -1f;
         [SerializeField] float maxHealthPoints = 200f;
-
+        [SerializeField] float regenerationPercentage = 70;
         bool isDead = false;
 
         //** Start and Update
 
         private void Start()
         {
+            GetComponent<BaseStats>().onLevelUp += RegenerateHealth;
+
             if (healthPoints < 0)
             {
                 healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
             }
         }
 
+        private void RegenerateHealth()
+        {
+            float newHealthPoints = GetComponent<BaseStats>().GetStat(Stat.Health) * (regenerationPercentage/100);
+            if (newHealthPoints > healthPoints)
+                {
+                    healthPoints = newHealthPoints;
+                }
+        }
+
         //** Public methods
-        
+
         public bool IsDead()
         {
             return isDead;

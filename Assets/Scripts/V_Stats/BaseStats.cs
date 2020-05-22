@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace RPG.Stats
 {
@@ -8,7 +9,10 @@ namespace RPG.Stats
 
         [SerializeField] CharacterClass characterClass;
         [SerializeField] Progression progression = null;
-        
+        [SerializeField] GameObject levelUpParticleEffect = null;
+
+        public event Action onLevelUp;
+
         int currentLevel = 0;
 
         private void Start()
@@ -21,6 +25,7 @@ namespace RPG.Stats
                 experience.onExperienceGained += UpdateLevel;
             }
         }
+                           
 
         private void UpdateLevel()
         {
@@ -29,7 +34,14 @@ namespace RPG.Stats
             if (newLevel > currentLevel)
             {
                 currentLevel = newLevel;
+                LevelUpEffect();
+                onLevelUp();
             }
+        }
+
+        private void LevelUpEffect()
+        {
+            Instantiate(levelUpParticleEffect, transform);
         }
 
         public float GetStat(Stat stat)
