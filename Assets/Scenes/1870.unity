@@ -9176,7 +9176,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368011528}
-  m_LocalRotation: {x: 0.08552055, y: 0.019381834, z: -0.0016639569, w: 0.9961465}
+  m_LocalRotation: {x: 0.085520566, y: 0.019381862, z: -0.0016639598, w: 0.9961465}
   m_LocalPosition: {x: 63.73, y: 11.99, z: 69.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -15162,6 +15162,56 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019984311007137033, guid: 5c0245418126ca4449e7db7d21980dea,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -711.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019984311007137033, guid: 5c0245418126ca4449e7db7d21980dea,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 79.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019984311007137033, guid: 5c0245418126ca4449e7db7d21980dea,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -314.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019984311007137033, guid: 5c0245418126ca4449e7db7d21980dea,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 26.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019984311169656299, guid: 5c0245418126ca4449e7db7d21980dea,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -712.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019984311169656299, guid: 5c0245418126ca4449e7db7d21980dea,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 80.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019984311169656299, guid: 5c0245418126ca4449e7db7d21980dea,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -340.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019984311169656299, guid: 5c0245418126ca4449e7db7d21980dea,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 28.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019984311007137034, guid: 5c0245418126ca4449e7db7d21980dea,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019984311169656309, guid: 5c0245418126ca4449e7db7d21980dea,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c0245418126ca4449e7db7d21980dea, type: 3}
