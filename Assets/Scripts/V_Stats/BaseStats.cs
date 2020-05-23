@@ -70,9 +70,9 @@ namespace RPG.Stats
             float additive = GetAdditiveModifier(stat);
             float multiplicative = 1 + GetPercentageModifier(stat) / 100;
 
-            print(baseDamage + " base damage**");
-            print(additive + " additive damage**");
-            print(multiplicative + " multiplicative damage**");
+            //print(baseDamage + " base damage**");
+            //print(additive + " additive damage**");
+            //print(multiplicative + " multiplicative damage**");
 
             return (GetBaseStat(stat) + GetAdditiveModifier(stat)) * (1 + GetPercentageModifier(stat)/100);
 

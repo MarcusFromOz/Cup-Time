@@ -1,22 +1,26 @@
 ﻿using UnityEngine;
 using RPG.Resources;
+using RPG.Control;
 
-namespace RPG.Combat {
+namespace RPG.Combat
+{
 
     [RequireComponent(typeof(Health))]
-    public class CombatTarget : MonoBehaviour
+    public class CombatTarget : MonoBehaviour, IRaycastable
     {
-        //** Variables 
+        public bool HandleRaycast(PlayerController callingController)
+        {
+            if (!GetComponent<Fighter>().CanAttack(gameObject))
+            {
+                return false; 
+            }
 
-        
-        //** Start and Update
-
-
-        //** Public Methods
-
-
-        //** Private Methods
-
+            if (Input.GetMouseButton(0))
+            {
+                callingController.GetComponent<Fighter>().Attack(gameObject);
+            }
+            return true;
+        }
     }
 
 }
