@@ -30,10 +30,9 @@ namespace RPG.Control
         {
             //ToDo - Have an issue with my fader prefab - at runtime it doesn't seem to be using the prefab
             // and therefore I cant turn off raycast blocking for the canvas group - prevents me from using a different mouse cursor with the UI elements
-            
             //Come back and work out why
-
-            //if (InteractWithUI()) return;
+            
+            //**if (InteractWithUI()) return;
 
             if (health.IsDead())
             {
@@ -51,7 +50,7 @@ namespace RPG.Control
 
         private bool InteractWithComponent()
         {
-            RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
+            RaycastHit[] hits = RaycastAllSorted();
             foreach (RaycastHit hit in hits)
             {
                 IRaycastable[] raycastables = hit.transform.GetComponents<IRaycastable>();
@@ -66,6 +65,26 @@ namespace RPG.Control
             }
             return false;
         }
+
+        RaycastHit[] RaycastAllSorted()
+        {
+            //Get all hits
+            RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
+
+            //Sort by distance - build array of distances
+            float[] distances = new float[hits.Length];
+
+            for (int i = 0; i < hits.Length; i++)
+            {
+                distances[i] = hits[i].distance;
+            }
+
+            //sort the hits
+            Array.Sort(distances, hits);
+            
+            return hits;
+        }
+
 
         private bool InteractWithUI()
         {
