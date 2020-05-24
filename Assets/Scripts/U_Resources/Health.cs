@@ -14,12 +14,16 @@ namespace RPG.Resources
         [SerializeField] float maxHealthPoints = 200f;
         
         [SerializeField] float regenerationPercentage = 70;
-        [SerializeField] UnityEvent takeDamage;
+        public TakeDamageEvent takeDamage;
+
+        [System.Serializable]
+        public class TakeDamageEvent : UnityEvent<float>
+        {
+        }
 
         LazyValue<float> healthPoints;
 
         bool isDead = false;
-
 
         private void Awake()
         {
@@ -54,8 +58,7 @@ namespace RPG.Resources
                     healthPoints.value = newHealthPoints;
                 }
         }
-
-        
+                
         public bool IsDead()
         {
             return isDead;
@@ -67,7 +70,7 @@ namespace RPG.Resources
             
             healthPoints.value = Mathf.Max(healthPoints.value - damage, 0);
 
-            takeDamage.Invoke();
+            takeDamage.Invoke(damage);
 
             if (healthPoints.value == 0)
             {
@@ -75,8 +78,6 @@ namespace RPG.Resources
                 //Get XP from Basestats
                 AwardExperience(instigator);
             }
-            
-
         }
 
         public float GetHealthPoints()
@@ -88,8 +89,7 @@ namespace RPG.Resources
         {
             return GetComponent<BaseStats>().GetStat(Stat.Health);
         }
-
-
+        
         private void AwardExperience(GameObject instigator)
         {
             Experience experience = instigator.GetComponent<Experience>();
@@ -107,8 +107,7 @@ namespace RPG.Resources
         {
             healthPoints.value = Mathf.Min(healthPoints.value + healAmount, maxHealthPoints);
         }
-
-
+        
         private void Die()
         {
             if (isDead) {return;}
