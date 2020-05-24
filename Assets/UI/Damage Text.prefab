@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2995475522454130077}
   - component: {fileID: 7747704557387047842}
   - component: {fileID: 2642717006685323324}
+  - component: {fileID: 4743103294576473631}
   m_Layer: 5
   m_Name: Damage Text
   m_TagString: Untagged
@@ -155,6 +156,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e3b76a0410642048b6f3c67caa4060c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4743103294576473631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9693266730402695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c78ec9b3803c6d4ebda49e2a6d0d67d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetToDestroy: {fileID: 5054801123515786599}
 --- !u!1 &5054801123515786599
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,10 +278,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
