@@ -160,8 +160,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 124, y: -387}
-  m_SizeDelta: {x: 177.4, y: 15}
+  m_AnchoredPosition: {x: 259.4, y: -449.7}
+  m_SizeDelta: {x: 187, y: 82.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &145517674
 MonoBehaviour:
@@ -431,8 +431,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28, y: 95}
-  m_SizeDelta: {x: 1120.4, y: 223}
+  m_AnchoredPosition: {x: 14.7, y: 176}
+  m_SizeDelta: {x: 1146.9, y: 114.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &483824273
 MonoBehaviour:
@@ -531,10 +531,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -542,7 +542,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Press to play
 --- !u!222 &565455259
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -667,8 +667,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28, y: -185}
-  m_SizeDelta: {x: 1120.4, y: 153.7}
+  m_AnchoredPosition: {x: 2.7, y: -277.3}
+  m_SizeDelta: {x: 1469.8, y: 233.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1011959897
 MonoBehaviour:
@@ -690,7 +690,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -701,7 +701,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Avoid guards while learning what has made us the way we are.
+  m_Text: By the late 1860s Port Adelaide's river traffic was growing rapidly. The
+    increasing economic activity around the waterways ultimately resulted in a meeting
+    being organised by Port Adelaide locals John Rann, Mr. Leicester and Mr. Ireland
+    with the intention to form a sporting club to benefit the growing number of workers
+    associated with the wharfes and surrounding industries
 --- !u!222 &1011959898
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -744,8 +748,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28, y: -355}
-  m_SizeDelta: {x: 1120.4, y: 223}
+  m_AnchoredPosition: {x: -10.5, y: -457.52}
+  m_SizeDelta: {x: 816.8, y: 127.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1027943602
 MonoBehaviour:
@@ -986,15 +990,15 @@ RectTransform:
   m_GameObject: {fileID: 1310678917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 142}
-  m_LocalScale: {x: 0.78, y: 0.78, z: 0.78}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1235072562}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.1, y: 86.2}
-  m_SizeDelta: {x: 2196.1, y: 986.8}
+  m_AnchoredPosition: {x: 0.79998, y: 184.18}
+  m_SizeDelta: {x: 1890.6, y: 689.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1310678919
 MonoBehaviour:
@@ -1009,7 +1013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.59607846}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.41960785}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1135,8 +1139,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28, y: -23}
-  m_SizeDelta: {x: 1120.4, y: 223}
+  m_AnchoredPosition: {x: 35.2, y: 82.6}
+  m_SizeDelta: {x: 1105.9, y: 218.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1703918192
 MonoBehaviour:
@@ -1169,8 +1173,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Explore 4 eras in Port Adelaide''s history and collect our premiership
-    trophies along the way. '
+  m_Text: 'Explore 4 eras in Port Adelaide Football Clubs history and collect our
+    premiership trophies along the way. '
 --- !u!222 &1703918193
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1213,7 +1217,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 703.8, y: -471.9}
+  m_AnchoredPosition: {x: 738, y: -498}
   m_SizeDelta: {x: 416.2, y: 98.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1925162523
