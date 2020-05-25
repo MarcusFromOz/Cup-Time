@@ -18,7 +18,7 @@ namespace RPG.SceneManagement
         [SerializeField] float fadeInTime = 2f;
         [SerializeField] float fadeWaitTime = 0.5f;
 
-        //Remove this field and logic post gameJam :)
+        //ToDo - **** Remove this field and logic post gameJam :)
         [SerializeField] bool isGameJam = true;
 
         //ToDo think about where this should be
