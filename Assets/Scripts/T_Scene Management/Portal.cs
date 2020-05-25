@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.AI;
+using RPG.Control;
 
 namespace RPG.SceneManagement
 {
@@ -81,7 +82,13 @@ namespace RPG.SceneManagement
                 wrapper.Save();
             }
 
+            PlayerController playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+            playerController.enabled = false;
+
             yield return SceneManager.LoadSceneAsync(sceneToLoad);
+
+            PlayerController newPlayerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+            newPlayerController.enabled = false;
 
             //Load current level
             if (wrapper != null)
@@ -95,8 +102,10 @@ namespace RPG.SceneManagement
             wrapper.Save();
 
             yield return new WaitForSeconds(fadeWaitTime);
-            yield return fader.FadeIn(fadeInTime);
+            
+            fader.FadeIn(fadeInTime);
 
+            newPlayerController.enabled = true;
             Destroy(gameObject);
         }
 
