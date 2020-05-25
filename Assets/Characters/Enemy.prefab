@@ -133,6 +133,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1785245547}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &213505486921674927
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8487686758861501931}
+    m_Modifications:
+    - target: {fileID: 8896960921458273554, guid: c7682bd74708c204ab6ffbd463804b3e,
+        type: 3}
+      propertyPath: m_Name
+      value: Health Bar
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707020789324693528, guid: c7682bd74708c204ab6ffbd463804b3e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707020789324693528, guid: c7682bd74708c204ab6ffbd463804b3e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.118
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707020789324693528, guid: c7682bd74708c204ab6ffbd463804b3e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707020789324693528, guid: c7682bd74708c204ab6ffbd463804b3e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707020789324693528, guid: c7682bd74708c204ab6ffbd463804b3e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707020789324693528, guid: c7682bd74708c204ab6ffbd463804b3e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707020789324693528, guid: c7682bd74708c204ab6ffbd463804b3e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707020789324693528, guid: c7682bd74708c204ab6ffbd463804b3e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707020789324693528, guid: c7682bd74708c204ab6ffbd463804b3e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707020789324693528, guid: c7682bd74708c204ab6ffbd463804b3e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707020789324693528, guid: c7682bd74708c204ab6ffbd463804b3e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7943713726602977530, guid: c7682bd74708c204ab6ffbd463804b3e,
+        type: 3}
+      propertyPath: healthComponent
+      value: 
+      objectReference: {fileID: 6897526546005129602}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c7682bd74708c204ab6ffbd463804b3e, type: 3}
 --- !u!1001 &6267870624185205888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -200,6 +274,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5888104926317134467, guid: 1585f55580f6c334eb1933ba3a7da3c5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8986268377429462868, guid: 1585f55580f6c334eb1933ba3a7da3c5,
         type: 3}
       propertyPath: weaponDamage
@@ -261,3 +340,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6267870624185205888}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6897526546005129602 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 667408809057860866, guid: 1585f55580f6c334eb1933ba3a7da3c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 6267870624185205888}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197779616952560731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5650025c3c860a34caabe82b1abf46de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

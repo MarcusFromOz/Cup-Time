@@ -4,7 +4,7 @@ using RPG.Saving;
 using UnityEngine.SceneManagement;
 using RPG.SceneManagement;
 
-namespace RPG.Resources
+namespace RPG.Attributes
 {
     public class Trophy : MonoBehaviour, ISaveable
     {
