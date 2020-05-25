@@ -14,7 +14,7 @@ namespace RPG.Attributes
         {
             float healthPercentage = healthComponent.GetFraction();
 
-            if (Mathf.Approximately(healthPercentage, 1) || Mathf.Approximately(healthPercentage, 0))
+            if (Mathf.Approximately(healthPercentage, 1) || Mathf.Approximately(healthPercentage, 0) || float.IsNaN(healthPercentage))
             {
                 rootCanvas.enabled = false;
                 return;
