@@ -8,8 +8,6 @@ namespace RPG.SceneManagement
     public class Portal : MonoBehaviour
     {
 
-        //** variables
-
         enum DestinationIdentifier { A, B, C, D, E }
 
         [SerializeField] int sceneToLoad = -1;
@@ -25,11 +23,6 @@ namespace RPG.SceneManagement
 
         //ToDo think about where this should be
         private int numberOfTrophies = 0;
-
-        //** Start and Update
-
-
-        //** Public methods
 
         //To go from Opening Scene to Scene 1 
         public void LoadFirstScene()
@@ -56,8 +49,6 @@ namespace RPG.SceneManagement
             }
         }
         
-        //** Private methods
-
         private void OnTriggerEnter(Collider other)
         {
             if (other.tag == "Player" && !isGameJam)

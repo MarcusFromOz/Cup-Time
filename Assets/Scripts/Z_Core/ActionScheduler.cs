@@ -6,15 +6,8 @@ namespace RPG.Core
 {
     public class ActionScheduler : MonoBehaviour
     {
-        //** Variables 
         IAction currentAction;
 
-
-        //** Start and Update
-
-
-        //** Public Methods
-        
         public void CancelCurrentAction()
         {
             StartAction(null);
@@ -33,8 +26,6 @@ namespace RPG.Core
             currentAction = action;
         }
         
-        //** Private Methods
-
 
     }
 }
