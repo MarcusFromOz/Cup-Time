@@ -12,10 +12,13 @@ namespace RPG.Attributes
     {
         //ToDo: remove this now its kinda irrelevant 
         [SerializeField] float maxHealthPoints = 200f;
-        
         [SerializeField] float regenerationPercentage = 70;
+        [SerializeField] UnityEvent onDie;
+
+
         public TakeDamageEvent takeDamage;
 
+        
         [System.Serializable]
         public class TakeDamageEvent : UnityEvent<float>
         {
@@ -74,6 +77,7 @@ namespace RPG.Attributes
 
             if (healthPoints.value == 0)
             {
+                onDie.Invoke();
                 Die();
                 //Get XP from Basestats
                 AwardExperience(instigator);
