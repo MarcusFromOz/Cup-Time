@@ -64,7 +64,7 @@ namespace RPG.Combat
             if (target.IsDead()) return;
 
             //get into range
-            if (!GetIsInRange())
+            if (!GetIsInRange(target.transform))
             {
                 GetComponent<Mover>().MoveTo(target.transform.position, attackSpeedFraction);
             }
@@ -83,7 +83,10 @@ namespace RPG.Combat
 
             //print("combat target position = " + combatTarget.transform.position);
 
-            if (!GetComponent<Mover>().CanMoveTo(combatTarget.transform.position)) return false;
+            if (!GetComponent<Mover>().CanMoveTo(combatTarget.transform.position) && !GetIsInRange(combatTarget.transform))
+            {
+                return false;
+            }
 
             Health targetToTest = combatTarget.GetComponent<Health>();
 
@@ -123,9 +126,9 @@ namespace RPG.Combat
             GetComponent<Animator>().SetTrigger("attack");
         }
 
-        private bool GetIsInRange()
+        private bool GetIsInRange(Transform targetTransform)
         {
-            return Vector3.Distance(transform.position, target.transform.position) < currentWeaponConfig.GetRange();
+            return Vector3.Distance(transform.position, targetTransform.position) < currentWeaponConfig.GetRange();
         }
                 
         private void StopAttack()

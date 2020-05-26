@@ -4,6 +4,7 @@ using RPG.Core;
 using RPG.Movement;
 using RPG.Attributes;
 using GameDevTV.Utils;
+using System;
 
 namespace RPG.Control
 {
@@ -15,13 +16,15 @@ namespace RPG.Control
         [SerializeField] PatrolPath patrolPath;
         [SerializeField] float waypointTolerance = 1f;
         [SerializeField] float waypointDwellTime = 3f;
-        
+        [SerializeField] float shoutDistance = 5f;
+
         [Range(0,1)] [SerializeField] float patrolSpeedFraction = 0.3f;
         
         Fighter fighter;
         Health health;
         GameObject player;
         Mover mover;
+
         LazyValue<Vector3> guardPosition;
         float timeSinceLastSawPlayer = Mathf.Infinity;
         float timeSinceArrivedAtWaypoint = Mathf.Infinity;
@@ -132,7 +135,24 @@ namespace RPG.Control
         {
             timeSinceLastSawPlayer = 0;
             fighter.Attack(player);
+
+            AggrevateNearbyEnemies();
+
             //alter run speed here? nav mesh agent speed x factor
+        }
+
+        private void AggrevateNearbyEnemies()
+        {
+            RaycastHit[] hits = Physics.SphereCastAll(transform.position, shoutDistance, Vector3.up, 0);
+
+            foreach (RaycastHit hit in hits)
+            {
+                AIController ai = hit.collider.GetComponent<AIController>();
+                if (ai == null) continue;
+
+                ai.Aggravate();
+            }
+            
         }
 
         private bool IsAggrevated()
