@@ -6,7 +6,7 @@ using RPG.SceneManagement;
 
 namespace RPG.Attributes
 {
-    public class Trophy : MonoBehaviour, ISaveable
+    public class Trophy : MonoBehaviour
     {
         Health player;
         [SerializeField] float healAmount = 50f;
@@ -36,8 +36,6 @@ namespace RPG.Attributes
                 // Add 50ish to players health
                 player.HealDamage(healAmount);
 
-                //Debug.Log(gameObject.tag + " was collided with");
-
                 if (gameObject.tag != null)
                 {
                     SetTrophyAsCollected();
@@ -47,7 +45,6 @@ namespace RPG.Attributes
                 //Portal portal = GetComponent<Portal>();
                 //portal.IncrementTrophyCount();
 
-                
                 Destroy(gameObject, 0.5f);
                 }
         }                
@@ -82,26 +79,27 @@ namespace RPG.Attributes
             }
         }
 
-        public object CaptureState()
-        {
+        //public object CaptureState()
+        //{
             // ToDo - Get Trophy state saving between levels and restarts
             // not sure why I couldn't debug this with a breakpoint - it didn't trigger
-            return years;
-        }
+            
+        //    return years;
+        //}
 
-        public void RestoreState(object state)
-        {
-            GameObject[] storedTrophies = (GameObject[])state;
-            years = storedTrophies;
+        //public void RestoreState(object state)
+        //{
+            //GameObject[] storedTrophies = (GameObject[])state;
+            //years = storedTrophies;
 
-            foreach (GameObject year in years)
-            {
-                textMeshProUGUI = year.GetComponent<TextMeshProUGUI>();
-                if (textMeshProUGUI != null)
-                {
-                    textMeshProUGUI.color = Color.white;
-                }
-            }
-        }
+            //foreach (GameObject year in years)
+            //{
+            //    textMeshProUGUI = year.GetComponent<TextMeshProUGUI>();
+            //    if (textMeshProUGUI != null)
+            //    {
+            //        textMeshProUGUI.color = Color.white;
+            //    }
+            //}
+        //}
     }
 }

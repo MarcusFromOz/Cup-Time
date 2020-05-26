@@ -10,11 +10,8 @@ namespace RPG.Attributes
 {
     public class Health : MonoBehaviour, ISaveable
     {
-        //ToDo: remove this now its kinda irrelevant 
-        [SerializeField] float maxHealthPoints = 200f;
         [SerializeField] float regenerationPercentage = 70;
         [SerializeField] UnityEvent onDie;
-
 
         public TakeDamageEvent takeDamage;
 
@@ -115,7 +112,7 @@ namespace RPG.Attributes
 
         public void HealDamage(float healAmount)
         {
-            healthPoints.value = Mathf.Min(healthPoints.value + healAmount, maxHealthPoints);
+            healthPoints.value = Mathf.Min(healthPoints.value + healAmount, GetMaxHealthPoints());
         }
         
         private void Die()
