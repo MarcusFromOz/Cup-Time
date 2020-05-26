@@ -4615,7 +4615,7 @@ PrefabInstance:
     - target: {fileID: 8487686758861501931, guid: 484589fa2cd981c46b38025a3b751f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.57
+      value: -18.17
       objectReference: {fileID: 0}
     - target: {fileID: 8487686758861501931, guid: 484589fa2cd981c46b38025a3b751f2c,
         type: 3}
@@ -10353,43 +10353,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4230440805314639957, guid: 484589fa2cd981c46b38025a3b751f2c,
-        type: 3}
-      propertyPath: uniqueIdentifier
-      value: e82de531-2241-46ec-85a1-deae786e0e79
-      objectReference: {fileID: 0}
-    - target: {fileID: 3048462395076250580, guid: 484589fa2cd981c46b38025a3b751f2c,
-        type: 3}
-      propertyPath: defaultweapon
-      value: 
-      objectReference: {fileID: 11400000, guid: 88837254e314bfa4cb46fa0ff03543d9,
-        type: 2}
-    - target: {fileID: 3048462395076250580, guid: 484589fa2cd981c46b38025a3b751f2c,
-        type: 3}
-      propertyPath: defaultWeapon
-      value: 
-      objectReference: {fileID: 11400000, guid: 135bce1560ffd8849bdbf20e4cc526d3,
-        type: 2}
-    - target: {fileID: 6445894962371499069, guid: 484589fa2cd981c46b38025a3b751f2c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6970559143835041071, guid: 484589fa2cd981c46b38025a3b751f2c,
         type: 3}
       propertyPath: patrolPath
       value: 
       objectReference: {fileID: 1888206634366752383}
-    - target: {fileID: 6970559143835041071, guid: 484589fa2cd981c46b38025a3b751f2c,
-        type: 3}
-      propertyPath: waypointDwellTime
-      value: 3.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 6267870624133644115, guid: 484589fa2cd981c46b38025a3b751f2c,
-        type: 3}
-      propertyPath: m_Speed
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 484589fa2cd981c46b38025a3b751f2c, type: 3}
 --- !u!4 &1273007863 stripped
