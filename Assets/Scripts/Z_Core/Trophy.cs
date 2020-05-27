@@ -47,9 +47,7 @@ namespace RPG.Attributes
                     SetTrophyAsCollected();
                 }
 
-                //ToDo **fix this
-                //Portal portal = GetComponent<Portal>();
-                //portal.IncrementTrophyCount();
+                player.IncrementTrophyCount();
 
                 Destroy(gameObject, 0.5f);
             }
@@ -77,8 +75,8 @@ namespace RPG.Attributes
                     //textMeshProUGUI.enabled = true;
                     //}
                 }
-
             }
+
         }
 
         public CursorType GetCursorType()

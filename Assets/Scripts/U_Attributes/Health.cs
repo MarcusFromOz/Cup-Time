@@ -5,6 +5,8 @@ using RPG.Core;
 using System;
 using GameDevTV.Utils;
 using UnityEngine.Events;
+using RPG.SceneManagement;
+using System.Collections;
 
 namespace RPG.Attributes
 {
@@ -12,10 +14,13 @@ namespace RPG.Attributes
     {
         [SerializeField] float regenerationPercentage = 70;
         [SerializeField] UnityEvent onDie;
-
-        public TakeDamageEvent takeDamage;
-
         
+        public TakeDamageEvent takeDamage;
+        
+        //ToDo think about where this should be
+        private int numberOfTrophies = 0;
+
+
         [System.Serializable]
         public class TakeDamageEvent : UnityEvent<float>
         {
@@ -81,6 +86,18 @@ namespace RPG.Attributes
             }
         }
 
+        public void IncrementTrophyCount()
+        {
+            //ToDo get this working and/or move it to somewhere more sensible
+            numberOfTrophies++;
+
+            //ToDo #Trophies and Scene number hardcoded for now 
+            if (numberOfTrophies == 10)
+            {
+                StartCoroutine(LoadEndScreen(1)); 
+            }
+        }
+
         public float GetHealthPoints()
         {
             return healthPoints.value; 
@@ -117,12 +134,19 @@ namespace RPG.Attributes
         
         private void Die()
         {
-            if (isDead) {return;}
+            if (isDead) { return; }
 
-           
-            isDead = true; 
+
+            isDead = true;
             GetComponent<Animator>().SetTrigger("die");
             GetComponent<ActionScheduler>().CancelCurrentAction();
+            StartCoroutine (LoadEndScreen(2));
+        }
+
+        IEnumerator LoadEndScreen(int delay)
+        {
+            yield return new WaitForSeconds(delay);
+            GetComponent<Portal>().LoadClosingScene();
         }
 
         public object CaptureState()

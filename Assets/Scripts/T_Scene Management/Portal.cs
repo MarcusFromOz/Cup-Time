@@ -22,9 +22,6 @@ namespace RPG.SceneManagement
         //ToDo - **** Remove this field and logic post gameJam :)
         [SerializeField] bool isGameJam = true;
 
-        //ToDo think about where this should be
-        private int numberOfTrophies = 0;
-
         //To go from Opening Scene to Scene 1 
         public void LoadFirstScene()
         {
@@ -34,22 +31,12 @@ namespace RPG.SceneManagement
 
         public void LoadClosingScene()
         {
-            sceneToLoad = 4;
-            StartCoroutine(Transition());
+            sceneToLoad = 5;
+
+            SceneManager.LoadScene(sceneToLoad);
+            //StartCoroutine(Transition());
         }
 
-        public void IncrementTrophyCount()
-        {
-            //ToDo get this working and/or move it to somewhere more sensible
-            numberOfTrophies++;
-
-            //ToDo #Trophies and Scene number hardcoded for now 
-            if (numberOfTrophies == 10)
-            {
-                SceneManager.LoadScene(5);
-            }
-        }
-        
         private void OnTriggerEnter(Collider other)
         {
             if (other.tag == "Player" && !isGameJam)
@@ -82,7 +69,6 @@ namespace RPG.SceneManagement
                 wrapper.Save();
             }
 
-            
             if (currentScene > 0)
             {
                 PlayerController playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
