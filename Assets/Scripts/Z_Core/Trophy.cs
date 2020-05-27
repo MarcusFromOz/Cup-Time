@@ -3,10 +3,12 @@ using TMPro;
 using RPG.Saving;
 using UnityEngine.SceneManagement;
 using RPG.SceneManagement;
+using RPG.Control;
+using RPG.Combat;
 
 namespace RPG.Attributes
 {
-    public class Trophy : MonoBehaviour
+    public class Trophy : MonoBehaviour, IRaycastable
     {
         Health player;
         [SerializeField] float healAmount = 50f;
@@ -25,15 +27,19 @@ namespace RPG.Attributes
 
         private void OnTriggerEnter(Collider other)
         {
+            CollectTrophy(other);
+        }
+
+        private void CollectTrophy(Collider other)
+        {
             //ToDo
-            // Check the win condition
-            // throw Update some info to the canvas
+            // ..Check the win condition
+            // ..throw Update some info to the canvas
 
             player = other.GetComponent<Health>();
 
             if (other.tag == "Player")
             {
-                // Add 50ish to players health
                 player.HealDamage(healAmount);
 
                 if (gameObject.tag != null)
@@ -41,13 +47,13 @@ namespace RPG.Attributes
                     SetTrophyAsCollected();
                 }
 
-                //ToDo fix this
+                //ToDo **fix this
                 //Portal portal = GetComponent<Portal>();
                 //portal.IncrementTrophyCount();
 
                 Destroy(gameObject, 0.5f);
-                }
-        }                
+            }
+        }
 
         private void SetTrophyAsCollected()
         {
@@ -60,46 +66,67 @@ namespace RPG.Attributes
                 {
                     textMeshProUGUI.color = Color.white;
 
+                    // ToDo - this is to do with storing some text with each trophy - telling a bit of a story about it
+                    // - Get the text from the Dictionary
+                    // - This is a dodgey way to do it - removed for now
+
                     //if (textMeshProUGUI.enabled == false)
                     //{
-                    // ToDo - this is to do with storing some text with each trophy - telling a bit of a story about it
-                    // ToDo - Get the text from the Dictionary
-                    // ToDo - This is a very dodgey way to do it - be more specific or remove
                     //textMeshProUGUI.color = Color.black;
                     //textMeshProUGUI.enabled = true;
                     //}
                 }
 
-                // if inactive by default then activate it
-                // textMeshPro = year.GetComponent<TextMeshPro>();
-                // if (textMeshPro != null)
-                // {
-                //    textMeshPro.gameObject.SetActive(true);
-                // }
             }
         }
 
+        public CursorType GetCursorType()
+        {
+            return CursorType.Trophy;
+        }
+
+        public bool HandleRaycast(PlayerController callingController)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                player = callingController.GetComponent<Health>();
+
+                if (callingController.tag == "Player")
+                {
+                    player.HealDamage(healAmount);
+
+                    if (gameObject.tag != null)
+                    {
+                        SetTrophyAsCollected();
+                    }
+
+                    Destroy(gameObject, 0.5f);
+                }
+            }
+            return true;
+        }
+
+
         //public object CaptureState()
         //{
-            // ToDo - Get Trophy state saving between levels and restarts
-            // not sure why I couldn't debug this with a breakpoint - it didn't trigger
-            
+        //    ToDo - Get Trophy state saving between levels and restarts
+        //      - Not sure why I couldn't debug this with a breakpoint - it didn't trigger
         //    return years;
         //}
 
         //public void RestoreState(object state)
         //{
-            //GameObject[] storedTrophies = (GameObject[])state;
-            //years = storedTrophies;
+        //  GameObject[] storedTrophies = (GameObject[])state;
+        //  years = storedTrophies;
 
-            //foreach (GameObject year in years)
-            //{
-            //    textMeshProUGUI = year.GetComponent<TextMeshProUGUI>();
-            //    if (textMeshProUGUI != null)
-            //    {
-            //        textMeshProUGUI.color = Color.white;
-            //    }
-            //}
-        //}
+        //  foreach (GameObject year in years)
+        //  {
+        //    textMeshProUGUI = year.GetComponent<TextMeshProUGUI>();
+        //    if (textMeshProUGUI != null)
+        //    {
+        //        textMeshProUGUI.color = Color.white;
+        //    }
+        //  }
+        
     }
 }
