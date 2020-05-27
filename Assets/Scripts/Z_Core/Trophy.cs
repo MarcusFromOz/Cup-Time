@@ -64,7 +64,8 @@ namespace RPG.Attributes
                 textMeshProUGUI = year.GetComponent<TextMeshProUGUI>();
                 if (textMeshProUGUI != null)
                 {
-                    textMeshProUGUI.color = Color.white;
+                    textMeshProUGUI.color = Color.yellow;
+                    textMeshProUGUI.fontStyle = FontStyles.Bold;
 
                     // ToDo - this is to do with storing some text with each trophy - telling a bit of a story about it
                     // - Get the text from the Dictionary
