@@ -82,8 +82,12 @@ namespace RPG.SceneManagement
                 wrapper.Save();
             }
 
-            PlayerController playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
-            playerController.enabled = false;
+            
+            if (currentScene > 0)
+            {
+                PlayerController playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+                playerController.enabled = false;
+            }
 
             yield return SceneManager.LoadSceneAsync(sceneToLoad);
 
