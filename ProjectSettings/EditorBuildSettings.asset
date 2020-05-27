@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Closing.unity
     guid: bddf081ec19a0d74e9ab9d95e9ff7f20
+  - enabled: 1
+    path: Assets/Scenes/ArtCredit.unity
+    guid: 7dcd1cea3e3d3bb479cfb7f4f1762036
   m_configObjects: {}
