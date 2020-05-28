@@ -69,7 +69,7 @@ namespace RPG.SceneManagement
                 wrapper.Save();
             }
 
-            if (currentScene > 0)
+            if (currentScene > 0 && currentScene < 5)
             {
                 PlayerController playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
                 playerController.enabled = false;
