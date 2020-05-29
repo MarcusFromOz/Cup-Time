@@ -63,11 +63,11 @@ namespace RPG.SceneManagement
             }
 
             //Save current level
-            SavingWrapper wrapper = FindObjectOfType<SavingWrapper>();
-            if (wrapper != null)
-            {
-                wrapper.Save();
-            }
+            //SavingWrapper wrapper = FindObjectOfType<SavingWrapper>();
+            //if (wrapper != null)
+            //{
+            //    wrapper.Save();
+            //}
 
             if (currentScene > 0 && currentScene < 5)
             {
@@ -81,15 +81,15 @@ namespace RPG.SceneManagement
             newPlayerController.enabled = false;
 
             //Load current level
-            if (wrapper != null)
-            {
-                wrapper.Load();
-            }
+            //if (wrapper != null)
+            //{
+            //    wrapper.Load();
+            //}
 
             Portal otherPortal = GetOtherPortal();
             UpdatePlayer(otherPortal);
 
-            wrapper.Save();
+            //wrapper.Save();
 
             yield return new WaitForSeconds(fadeWaitTime);
             
