@@ -2735,6 +2735,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 282367153}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &286474177 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1243378968633333691, guid: 5c0245418126ca4449e7db7d21980dea,
+    type: 3}
+  m_PrefabInstance: {fileID: 4641974331969704942}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &302626333 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4954688070698626, guid: 58cd80e8735394b41ad92a2458c90f9a,
@@ -4860,7 +4866,7 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: 1860cc256f2a6d24182d343e0125e20f,
+      objectReference: {fileID: 11400000, guid: 135bce1560ffd8849bdbf20e4cc526d3,
         type: 2}
     - target: {fileID: 6445894962371499069, guid: 484589fa2cd981c46b38025a3b751f2c,
         type: 3}
@@ -4876,6 +4882,11 @@ PrefabInstance:
         type: 3}
       propertyPath: waypointDwellTime
       value: 2.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970559143835041071, guid: 484589fa2cd981c46b38025a3b751f2c,
+        type: 3}
+      propertyPath: patrolSpeedFraction
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6267870624133644115, guid: 484589fa2cd981c46b38025a3b751f2c,
         type: 3}
@@ -5204,37 +5215,37 @@ PrefabInstance:
     - target: {fileID: 5613951017396866186, guid: 90dda8b9aa778264fa1098b88bf0c176,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 62.082
+      value: 61.733
       objectReference: {fileID: 0}
     - target: {fileID: 5613951017396866186, guid: 90dda8b9aa778264fa1098b88bf0c176,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.22
+      value: 6.2
       objectReference: {fileID: 0}
     - target: {fileID: 5613951017396866186, guid: 90dda8b9aa778264fa1098b88bf0c176,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 84.71
+      value: 85.303
       objectReference: {fileID: 0}
     - target: {fileID: 5613951017396866186, guid: 90dda8b9aa778264fa1098b88bf0c176,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5
+      value: 0.5669223
       objectReference: {fileID: 0}
     - target: {fileID: 5613951017396866186, guid: 90dda8b9aa778264fa1098b88bf0c176,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5
+      value: 0.5669223
       objectReference: {fileID: 0}
     - target: {fileID: 5613951017396866186, guid: 90dda8b9aa778264fa1098b88bf0c176,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.5
+      value: 0.42260984
       objectReference: {fileID: 0}
     - target: {fileID: 5613951017396866186, guid: 90dda8b9aa778264fa1098b88bf0c176,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.5
+      value: -0.42260984
       objectReference: {fileID: 0}
     - target: {fileID: 5613951017396866186, guid: 90dda8b9aa778264fa1098b88bf0c176,
         type: 3}
@@ -5244,17 +5255,17 @@ PrefabInstance:
     - target: {fileID: 5613951017396866186, guid: 90dda8b9aa778264fa1098b88bf0c176,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 270
+      value: 286.595
       objectReference: {fileID: 0}
     - target: {fileID: 5613951017396866186, guid: 90dda8b9aa778264fa1098b88bf0c176,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
+      value: -179.99998
       objectReference: {fileID: 0}
     - target: {fileID: 5613951017396866186, guid: 90dda8b9aa778264fa1098b88bf0c176,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90.00001
       objectReference: {fileID: 0}
     - target: {fileID: 6583222302740010530, guid: 90dda8b9aa778264fa1098b88bf0c176,
         type: 3}
@@ -6672,6 +6683,11 @@ PrefabInstance:
       propertyPath: waypointDwellTime
       value: 3.98
       objectReference: {fileID: 0}
+    - target: {fileID: 6970559143835041071, guid: 484589fa2cd981c46b38025a3b751f2c,
+        type: 3}
+      propertyPath: patrolSpeedFraction
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 6267870624133644115, guid: 484589fa2cd981c46b38025a3b751f2c,
         type: 3}
       propertyPath: m_Speed
@@ -7996,7 +8012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd0cd8c972977b4eb17060ef59b92dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: -1
+  sceneToLoad: 5
   spawnPoint: {fileID: 0}
   destination: 0
   currentScene: 1
@@ -13562,6 +13578,11 @@ PrefabInstance:
       propertyPath: waypointDwellTime
       value: 2.38
       objectReference: {fileID: 0}
+    - target: {fileID: 6970559143835041071, guid: 484589fa2cd981c46b38025a3b751f2c,
+        type: 3}
+      propertyPath: patrolSpeedFraction
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 6267870624133644115, guid: 484589fa2cd981c46b38025a3b751f2c,
         type: 3}
       propertyPath: m_Speed
@@ -14326,6 +14347,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1707089734}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1735127465 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1243378968633333705, guid: 5c0245418126ca4449e7db7d21980dea,
+    type: 3}
+  m_PrefabInstance: {fileID: 4641974331969704942}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1737240560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14939,6 +14966,11 @@ PrefabInstance:
         type: 3}
       propertyPath: waypointDwellTime
       value: 3.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970559143835041071, guid: 484589fa2cd981c46b38025a3b751f2c,
+        type: 3}
+      propertyPath: patrolSpeedFraction
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6267870624133644115, guid: 484589fa2cd981c46b38025a3b751f2c,
         type: 3}
@@ -21160,19 +21192,17 @@ PrefabInstance:
         type: 3}
       propertyPath: rightHandTransform
       value: 
-      objectReference: {fileID: 6227344467121648207, guid: 4c53c07855e423043a93d1082de4f1bd,
-        type: 3}
+      objectReference: {fileID: 1735127465}
     - target: {fileID: 6095765644444564199, guid: 5c0245418126ca4449e7db7d21980dea,
         type: 3}
       propertyPath: leftHandTransform
       value: 
-      objectReference: {fileID: 6227344467121648207, guid: db63bb7efee7ead4191018aab41b73cf,
-        type: 3}
+      objectReference: {fileID: 286474177}
     - target: {fileID: 6095765644444564199, guid: 5c0245418126ca4449e7db7d21980dea,
         type: 3}
       propertyPath: defaultWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: 135bce1560ffd8849bdbf20e4cc526d3,
+      objectReference: {fileID: 11400000, guid: ec03ff0db95579a42916492dabae94f0,
         type: 2}
     - target: {fileID: 1243378968633333655, guid: 5c0245418126ca4449e7db7d21980dea,
         type: 3}

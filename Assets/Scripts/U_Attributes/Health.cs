@@ -79,10 +79,21 @@ namespace RPG.Attributes
 
             if (healthPoints.value == 0)
             {
+            
                 onDie.Invoke();
                 Die();
-                //Get XP from Basestats
-                AwardExperience(instigator);
+
+                //only load End Screen if the player dies
+
+                if (this.tag == "Player")
+                {
+                    StartCoroutine(LoadEndScreen(2));
+                }
+                else
+                {
+                    //Get XP from Basestats
+                    AwardExperience(instigator);
+                }
             }
         }
 
@@ -140,7 +151,7 @@ namespace RPG.Attributes
             isDead = true;
             GetComponent<Animator>().SetTrigger("die");
             GetComponent<ActionScheduler>().CancelCurrentAction();
-            StartCoroutine (LoadEndScreen(2));
+            
         }
 
         IEnumerator LoadEndScreen(int delay)
