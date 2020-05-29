@@ -124,6 +124,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 2982295284063069553, guid: b22c3bff89d68034c93d564e1d610218,
+        type: 3}
+      propertyPath: currentScene
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2982295284063069559, guid: b22c3bff89d68034c93d564e1d610218,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -178,11 +183,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2982295284063069553, guid: b22c3bff89d68034c93d564e1d610218,
-        type: 3}
-      propertyPath: currentScene
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b22c3bff89d68034c93d564e1d610218, type: 3}
@@ -1032,12 +1032,13 @@ MonoBehaviour:
     m_MaxSize: 50
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Free Assets used in this game are thanks to GameDev.TV,  Mood Ware, Hovl
-    Studio, bobor lukas, NokoBot, SWG, Synty (removed?), SkythianCat.
+  m_Text: "Free Assets used in this game are thanks to GameDev.TV,  Mood Ware, Dogzerx,
+    HarpetStudio\r, Hovl Studio, VIS-Games, bobor lukas, NokoBot, Clayman Studios,
+    SWG2,  Red Iron Labs, LowlyPoly\r and SkythianCat."
 --- !u!222 &1439828405
 CanvasRenderer:
   m_ObjectHideFlags: 0
