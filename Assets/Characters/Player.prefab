@@ -306,8 +306,43 @@ PrefabInstance:
       objectReference: {fileID: 9000000, guid: 7e30eee73c241d5448ce0ac372cf6602, type: 3}
     - target: {fileID: 667408809057860866, guid: 1585f55580f6c334eb1933ba3a7da3c5,
         type: 3}
+      propertyPath: onWin.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 667408809057860866, guid: 1585f55580f6c334eb1933ba3a7da3c5,
+        type: 3}
       propertyPath: healthPoints
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 667408809057860866, guid: 1585f55580f6c334eb1933ba3a7da3c5,
+        type: 3}
+      propertyPath: onWin.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 667408809057860866, guid: 1585f55580f6c334eb1933ba3a7da3c5,
+        type: 3}
+      propertyPath: onWin.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 667408809057860866, guid: 1585f55580f6c334eb1933ba3a7da3c5,
+        type: 3}
+      propertyPath: onWin.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 667408809057860866, guid: 1585f55580f6c334eb1933ba3a7da3c5,
+        type: 3}
+      propertyPath: onWin.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 667408809057860866, guid: 1585f55580f6c334eb1933ba3a7da3c5,
+        type: 3}
+      propertyPath: onWin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141519812213013704, guid: 1585f55580f6c334eb1933ba3a7da3c5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1585f55580f6c334eb1933ba3a7da3c5, type: 3}

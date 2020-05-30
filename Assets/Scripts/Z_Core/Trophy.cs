@@ -99,6 +99,8 @@ namespace RPG.Attributes
                         SetTrophyAsCollected();
                     }
 
+                    player.IncrementTrophyCount();
+
                     Destroy(gameObject, 0.5f);
                 }
             }

@@ -14,7 +14,8 @@ namespace RPG.Attributes
     {
         [SerializeField] float regenerationPercentage = 70;
         [SerializeField] UnityEvent onDie;
-        
+        [SerializeField] UnityEvent onWin;
+
         public TakeDamageEvent takeDamage;
         
         //ToDo think about where this should be
@@ -105,7 +106,9 @@ namespace RPG.Attributes
             //ToDo #Trophies and Scene number hardcoded for now 
             if (numberOfTrophies == 10)
             {
-                StartCoroutine(LoadEndScreen(1)); 
+                GetComponent<Animator>().SetTrigger("win");
+                onWin.Invoke();
+                StartCoroutine(LoadEndScreen(3)); 
             }
         }
 
