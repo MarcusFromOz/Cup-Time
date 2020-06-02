@@ -33,7 +33,6 @@ namespace RPG.Attributes
         private void CollectTrophy(Collider other)
         {
             //ToDo
-            // ..Check the win condition
             // ..throw Update some info to the canvas
 
             player = other.GetComponent<Health>();
@@ -65,18 +64,11 @@ namespace RPG.Attributes
                     textMeshProUGUI.color = Color.yellow;
                     textMeshProUGUI.fontStyle = FontStyles.Bold;
 
-                    // ToDo - this is to do with storing some text with each trophy - telling a bit of a story about it
-                    // - Get the text from the Dictionary
-                    // - This is a dodgey way to do it - removed for now
+                    // ToDo - do something with storing some text with each trophy - telling a bit of a story about it
+                    //      - get the text from the Dictionary
 
-                    //if (textMeshProUGUI.enabled == false)
-                    //{
-                    //textMeshProUGUI.color = Color.black;
-                    //textMeshProUGUI.enabled = true;
-                    //}
                 }
             }
-
         }
 
         public CursorType GetCursorType()

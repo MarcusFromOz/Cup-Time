@@ -9,7 +9,6 @@ namespace RPG.Cinematics
 {
     public class CinematicControlRemover : MonoBehaviour
     {
-        //** variables
         GameObject player;
 
         private void Awake()
@@ -30,12 +29,6 @@ namespace RPG.Cinematics
             GetComponent<PlayableDirector>().stopped -= EnableControl;
         }
         
-       
-        //** public methods
-
-
-        //** private methods
-
         void DisableControl(PlayableDirector pd)
         {
             //Stop the player from doing any shenanigans he started 
@@ -48,10 +41,6 @@ namespace RPG.Cinematics
         {
             player.GetComponent<PlayerController>().enabled = true;
         }
-
-        
-
-
     }
 }
 
