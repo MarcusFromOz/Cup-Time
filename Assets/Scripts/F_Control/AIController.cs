@@ -85,11 +85,7 @@ namespace RPG.Control
             timeSinceAggrevated += Time.deltaTime;
         }
 
-        //** public methods
-
-
-        //** private methods
-
+        
         private void SuspicionBehaviour()
         {
             GetComponent<ActionScheduler>().CancelCurrentAction();
@@ -166,12 +162,11 @@ namespace RPG.Control
             if (distanceToPlayer > chaseDistance) return false;
 
             // not currently aggroed but within aggro distance
-
             RaycastHit testLineOfSight;
             var rayDirection = player.transform.position - transform.position;
 
             //this is a really handy debugging tool !!
-            //Debug.DrawRay(transform.position, rayDirection, Color.red);
+            Debug.DrawRay(transform.position, rayDirection, Color.red);
 
             if (Physics.Raycast(transform.position, rayDirection, out testLineOfSight))
             {

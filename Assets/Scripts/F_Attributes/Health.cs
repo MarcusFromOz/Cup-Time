@@ -104,7 +104,7 @@ namespace RPG.Attributes
             numberOfTrophies++;
 
             //ToDo #Trophies and Scene number hardcoded for now 
-            if (numberOfTrophies == 10)
+            if (numberOfTrophies == 1)
             {
                 GetComponent<Animator>().SetTrigger("win");
                 onWin.Invoke();
@@ -149,8 +149,7 @@ namespace RPG.Attributes
         private void Die()
         {
             if (isDead) { return; }
-
-
+            
             isDead = true;
             GetComponent<Animator>().SetTrigger("die");
             GetComponent<ActionScheduler>().CancelCurrentAction();
