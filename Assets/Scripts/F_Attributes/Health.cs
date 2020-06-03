@@ -104,7 +104,7 @@ namespace RPG.Attributes
             numberOfTrophies++;
 
             //ToDo #Trophies and Scene number hardcoded for now 
-            if (numberOfTrophies == 1)
+            if (numberOfTrophies == 10)
             {
                 GetComponent<Animator>().SetTrigger("win");
                 onWin.Invoke();
