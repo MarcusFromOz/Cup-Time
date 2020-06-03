@@ -158,8 +158,33 @@ namespace RPG.Control
         private bool IsAggrevated()
         {
             float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
-            
-            return distanceToPlayer < chaseDistance || timeSinceAggrevated < aggroCooldownTime;
+
+            // already aggroed?
+            if (timeSinceAggrevated < aggroCooldownTime) return true;
+
+            // not aggroed and outside aggro range
+            if (distanceToPlayer > chaseDistance) return false;
+
+            // not currently aggroed but within aggro distance
+
+            RaycastHit testLineOfSight;
+            var rayDirection = player.transform.position - transform.position;
+
+            //this is a really handy debugging tool !!
+            //Debug.DrawRay(transform.position, rayDirection, Color.red);
+
+            if (Physics.Raycast(transform.position, rayDirection, out testLineOfSight))
+            {
+                if (testLineOfSight.transform == player.transform)
+                {
+                    // enemy can see the player!
+                    return true;
+                }
+            }
+
+            //return distanceToPlayer < chaseDistance || timeSinceAggrevated < aggroCooldownTime;
+            return false;
+
         }
 
         //** Called by Unity
