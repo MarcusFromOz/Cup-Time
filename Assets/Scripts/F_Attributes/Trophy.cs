@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using RPG.SceneManagement;
 using RPG.Control;
 using RPG.Combat;
+using UnityEngine.UI;
 
 namespace RPG.Attributes
 {
@@ -15,60 +16,13 @@ namespace RPG.Attributes
         public GameObject[] years;
         private TextMeshProUGUI textMeshProUGUI;
         private TextMeshPro textMeshPro;
-        
+        [SerializeField] Text trophyText = null;
+        [SerializeField] Canvas trophyInfo = null;
+
         // Start is called before the first frame update
         void Start()
         {
-            //ToDo
-            //Get Trophies.ChildCount and populate this variable for the level
-            // use for the win condition
-        }
-
-
-        private void OnTriggerEnter(Collider other)
-        {
-            CollectTrophy(other);
-        }
-
-        private void CollectTrophy(Collider other)
-        {
-            //ToDo
-            // ..throw Update some info to the canvas
-
-            player = other.GetComponent<Health>();
-
-            if (other.tag == "Player")
-            {
-                player.HealDamage(healAmount);
-
-                if (gameObject.tag != null)
-                {
-                    SetTrophyAsCollected();
-                }
-
-                player.IncrementTrophyCount();
-
-                Destroy(gameObject, 0.5f);
-            }
-        }
-
-        private void SetTrophyAsCollected()
-        {
-            years = GameObject.FindGameObjectsWithTag(gameObject.tag);
-
-            foreach (GameObject year in years)
-            {
-                textMeshProUGUI = year.GetComponent<TextMeshProUGUI>();
-                if (textMeshProUGUI != null)
-                {
-                    textMeshProUGUI.color = Color.yellow;
-                    textMeshProUGUI.fontStyle = FontStyles.Bold;
-
-                    // ToDo - do something with storing some text with each trophy - telling a bit of a story about it
-                    //      - get the text from the Dictionary
-
-                }
-            }
+            trophyText.text = gameObject.name;
         }
 
         public CursorType GetCursorType()
@@ -88,17 +42,59 @@ namespace RPG.Attributes
 
                     if (gameObject.tag != null)
                     {
-                        SetTrophyAsCollected();
+                        UpdateUI();
                     }
 
                     player.IncrementTrophyCount();
 
-                    Destroy(gameObject, 0.5f);
+                    trophyInfo.GetComponent<Animation>().Play();
+
+                    Destroy(gameObject, 2f);
                 }
             }
             return true;
         }
 
+        private void UpdateUI()
+        {
+            years = GameObject.FindGameObjectsWithTag(gameObject.tag);
+
+            foreach (GameObject year in years)
+            {
+                textMeshProUGUI = year.GetComponent<TextMeshProUGUI>();
+                if (textMeshProUGUI != null)
+                {
+                    textMeshProUGUI.color = Color.yellow;
+                    textMeshProUGUI.fontStyle = FontStyles.Bold;
+                }
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            // CollectTrophy(other); - had 2 ways of collecting - this caused issues
+        }
+
+        //private void CollectTrophy(Collider other)
+        //{
+        
+        //    player = other.GetComponent<Health>();
+
+        //    if (other.tag == "Player")
+        //    {
+        //        player.HealDamage(healAmount);
+
+        //        if (gameObject.tag != null)
+        //        {
+        //            UpdateUI();
+        //        }
+
+        //        player.IncrementTrophyCount();
+
+        //        Destroy(gameObject, 0.5f);
+        //    }
+        //}
+                
 
         //public object CaptureState()
         //{
