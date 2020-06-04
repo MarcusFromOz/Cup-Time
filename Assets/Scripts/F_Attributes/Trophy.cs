@@ -18,6 +18,7 @@ namespace RPG.Attributes
         private TextMeshPro textMeshPro;
         [SerializeField] Text trophyText = null;
         [SerializeField] Canvas trophyInfo = null;
+        [SerializeField] float distanceToPickup = 5.0f;
 
         // Start is called before the first frame update
         void Start()
@@ -32,27 +33,31 @@ namespace RPG.Attributes
 
         public bool HandleRaycast(PlayerController callingController)
         {
-            if (Input.GetMouseButtonDown(0))
+            //proximity check
+            if (Vector3.Distance(callingController.transform.position, transform.position) < distanceToPickup)
             {
-                player = callingController.GetComponent<Health>();
-
-                if (callingController.tag == "Player")
+                if (Input.GetMouseButtonDown(0))
                 {
-                    player.HealDamage(healAmount);
-
-                    if (gameObject.tag != null)
+                    if (callingController.tag == "Player")
                     {
-                        UpdateUI();
+                        player = callingController.GetComponent<Health>();
+                        player.HealDamage(healAmount);
+
+                        if (gameObject.tag != null)
+                        {
+                            UpdateUI();
+                        }
+
+                        player.IncrementTrophyCount();
+
+                        trophyInfo.GetComponent<Animation>().Play();
+
+                        Destroy(gameObject, 2f);
                     }
-
-                    player.IncrementTrophyCount();
-
-                    trophyInfo.GetComponent<Animation>().Play();
-
-                    Destroy(gameObject, 2f);
                 }
+                return true;
             }
-            return true;
+            return false;
         }
 
         private void UpdateUI()
