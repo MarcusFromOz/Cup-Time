@@ -21,7 +21,7 @@ namespace RPG.Control
         }
 
         [SerializeField] CursorMapping[] cursorMappings = null;
-        [SerializeField] float maxNavMesgProjectionDistance = 1.0f;
+        [SerializeField] float maxNavMeshProjectionDistance = 1.0f;
         [SerializeField] float raycastRadius = 1f;
             
         private void Awake()
@@ -145,7 +145,7 @@ namespace RPG.Control
             if (!hasHit) return false;
 
             NavMeshHit navMeshHit;
-            bool hasCastToNavMesh = NavMesh.SamplePosition(hit.point, out navMeshHit, maxNavMesgProjectionDistance, NavMesh.AllAreas);
+            bool hasCastToNavMesh = NavMesh.SamplePosition(hit.point, out navMeshHit, maxNavMeshProjectionDistance, NavMesh.AllAreas);
 
             if (!hasCastToNavMesh) return false;
             

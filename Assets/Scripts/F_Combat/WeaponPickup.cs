@@ -8,6 +8,7 @@ namespace RPG.Combat
     {
         [SerializeField] WeaponConfig weapon = null;
         [SerializeField] float respawnTime = 5f;
+        [SerializeField] float distanceToPickup = 5.0f;
 
         private void OnTriggerEnter(Collider other)
         {
@@ -45,11 +46,16 @@ namespace RPG.Combat
 
         public bool HandleRaycast(PlayerController callingController)
         {
-            if (Input.GetMouseButtonDown(0))
+            //Do a distance check
+            if (Vector3.Distance(callingController.transform.position, transform.position) < distanceToPickup)
             {
-                Pickup(callingController.GetComponent<Fighter>());
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Pickup(callingController.GetComponent<Fighter>());
+                }
+                return true;
             }
-            return true;
+            return false;            
         }
 
         public CursorType GetCursorType()
