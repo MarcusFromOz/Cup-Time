@@ -317,8 +317,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hover the mouse and click the <<left mouse button>> to pick up items or
-    to fight
+  m_Text: Hover the mouse and click the left mouse button to pick up items or to fight
 --- !u!222 &187599053
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -620,7 +619,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hold down the <<right mouse button>> to rotate the camera
+  m_Text: Hold down the right mouse button to rotate the camera
 --- !u!222 &492092233
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1033,6 +1032,7 @@ RectTransform:
   - {fileID: 492092231}
   - {fileID: 1907636920}
   - {fileID: 1237855734}
+  - {fileID: 1476590879}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1109,7 +1109,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Click the <<left mouse button>> on the ground to move
+  m_Text: 'Click the left mouse button on the ground to move
 
 '
 --- !u!222 &1237855736
@@ -1262,6 +1262,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439209849}
   m_CullTransparentMesh: 0
+--- !u!1 &1476590878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1476590879}
+  - component: {fileID: 1476590881}
+  - component: {fileID: 1476590880}
+  m_Layer: 5
+  m_Name: Text2 (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1476590879
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476590878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1235072562}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1181.025, y: 217}
+  m_SizeDelta: {x: 1105.8999, y: 96.70001}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1476590880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476590878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.93333334, g: 0.7882353, b: 0.5254902, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 50
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Zoom the camera using the mouse wheel
+--- !u!222 &1476590881
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476590878}
+  m_CullTransparentMesh: 0
 --- !u!1 &1703918190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,7 +1407,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Explore 4 eras in Port Adelaide Football Club's history.
+  m_Text: Explore 4 eras in Port Adelaide Football Club's history and recover all
+    of the premiership cups.
 --- !u!222 &1703918193
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1484,7 +1562,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Build 1.0.7 - 4th June 2020
+  m_Text: Build 1.0.8 - 6th June 2020
 --- !u!222 &1925162524
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1527,7 +1605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1062, y: 175}
+  m_AnchoredPosition: {x: 1062, y: 155}
   m_SizeDelta: {x: 1070.1, y: 47.299988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2054611186

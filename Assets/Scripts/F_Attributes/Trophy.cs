@@ -18,7 +18,7 @@ namespace RPG.Attributes
         private TextMeshPro textMeshPro;
         [SerializeField] Text trophyText = null;
         [SerializeField] Canvas trophyInfo = null;
-        [SerializeField] float distanceToPickup = 5.0f;
+        [SerializeField] float distanceToPickup = 10.0f;
 
         // Start is called before the first frame update
         void Start()
