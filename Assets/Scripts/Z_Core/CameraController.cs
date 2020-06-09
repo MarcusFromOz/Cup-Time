@@ -8,7 +8,7 @@ namespace RPG.Core
     public class CameraController : MonoBehaviour
     {
         [SerializeField] GameObject freeLookCamera;
-        CinemachineFreeLook freeLookComponent;
+        CinemachineFreeLook freeLookComponent = null;
         PlayerController playerControllerScript;
 
         // Start is called before the first frame update
